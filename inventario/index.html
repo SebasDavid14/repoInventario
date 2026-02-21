@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTION PRODUCTOS</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #b20701; 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+        .container { 
+            background: white; 
+            padding: 2rem; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            width: 100%; 
+            max-width: 800px; 
+        }
+        h1 { 
+            text-align: center; 
+            color: #333; 
+        }
+        .input-group { 
+            display: flex; 
+            gap: 10px; 
+            margin-bottom: 20px; 
+        }
+        input { 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            flex: 1; 
+        }
+        button { 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-weight: bold; 
+        }
+        #btn-save { 
+            background-color: #054ee0; 
+            color: white; 
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 10px; 
+        }
+        th, td { 
+            padding: 12px; 
+            text-align: left; 
+            border-bottom: 1px solid #eee; 
+        }
+        th { 
+            background-color: #f8f9fa; 
+        }
+        .btn-edit { 
+            background-color: #03aa00; 
+            color: #333; 
+            margin-right: 5px; 
+        }
+        .btn-delete { 
+            background-color: #dc3545; 
+            color: white; 
+        }
+    </style>
+    <style type="text/css" id="operaUserStyle"></style>
+</head>
+<body>
+    <div class="container">
+        <h1>INVENTARIO DE PRODUCTOS</h1>
+        
+        <form id="product-form">
+            <input type="hidden" id="product-id">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Nombre del producto" required>
+                <input type="number" id="price" placeholder="Precio" required>
+                <button type="submit" id="btn-save">Guardar</button>
+            </div>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="/inventario/script.js"></script>
+</body>
+</html>
